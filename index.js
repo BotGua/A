@@ -12,12 +12,12 @@ const menu = require("./lib/menu.js");
 const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 //
-const BotName = 'ST4RZ BOT 🤖'; // Nama Bot Whatsapp
-const instagramlu = 'https://instagram.com/bintang_nur_pradana'; // Nama Instagramlu cok
-const whatsapplu = '0819-4698-3575'; // Nomor whatsapplu cok
+const BotName = 'Akb4r™'; // Nama Bot Whatsapp
+const instagramlu = 'https://instagram.com/kamaadoo_tanjiroo'; // Nama Instagramlu cok
+const whatsapplu = '0813-6896-5962'; // Nomor whatsapplu cok
 const kapanbotaktif = '24 Jam'; // Kapan bot lu aktif
 const grupch1 = 'https://chat.whatsapp.com/FsAlnxqz6y2BhCQi5ayCLG'; // OFFICIAL GRUP LU 1
-const grupch2 = 'https://chat.whatsapp.com/KLW3UlFfeaH36Ucm5zRfCz'; // OFFICIAL GRUP LU 2
+const grupch2 = 'Belum Ada'; // OFFICIAL GRUP LU 2
 //
 const
 {
@@ -122,13 +122,20 @@ if (text.includes("#say")){
 conn.sendMessage(id, teks, MessageType.text)
 }
 
-if (text.includes("#nulis")){
-  const teks = text.replace(/#nulis /, "")
-axios.get(`https://st4rz.herokuapp.com/api/nulis?text=${teks}`).then((res) => {
-    let hasil = `Download sendiri ya hasilnya dibawah, soalnya kalo dikirim langsung hasilnya blur\n\n${res.data.result.data}`;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
+if (text.includes('#nulis')){
+  var teks = text.replace(/#nulis /, '')
+    axios.get('https://bangandre.herokuapp.com/nulis?teks='+teks)
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang di proses⏳ silahkan tunggu sebentar', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
 }
+
 
 if (text.includes("#ytmp3")){
 const teks = text.replace(/#ytmp3 /, "")
