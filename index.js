@@ -818,7 +818,7 @@ await new Promise(resolve => setTimeout(resolve, 500));*/
 const buffer = fs.readFileSync(filepath)
 	conn.sendMessage(id , buffer , MessageType.audio);
 };
-}*/
+}*
 
 
 
@@ -829,3 +829,11 @@ const buffer = fs.readFileSync(filepath)
 
 
 })
+
+
+
+
+
+
+
+
