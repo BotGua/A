@@ -547,9 +547,9 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
       }
 
    }
-/*   if (text.includes("#yt"))
+/*   if (text.includes("#ytmp4"))
    {
-      const url = text.replace(/#yt/, "");
+      const url = text.replace(/#ytmp4/, "");
       const exec = require('child_process').exec;
 
       var videoid = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
