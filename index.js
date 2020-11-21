@@ -190,6 +190,22 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/twit?url=${teks}&apiKey=zFuV88p
 })
 }
 
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
 if (text.includes("#wiki")){
 const teks = text.replace(/#wiki /, "")
 axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
