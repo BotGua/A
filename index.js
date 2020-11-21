@@ -825,22 +825,10 @@ scdl("https://m.soundcloud.com/abdul-muttaqin-701361735/lucid-dreams-gustixa-ft-
 await new Promise(resolve => setTimeout(resolve, 500));*/
 
 /*	if(suara.length > 200){ // check longness of text, because otherways google translate will give me a empty file
-  msg.reply("Text kepanjangan bro!")if(suara.length > 200){ // check longness of text, because otherways google translate will give me a empty file
   msg.reply("Text kepanjangan bro!")
 }else{
 const buffer = fs.readFileSync(filepath)
 	conn.sendMessage(id , buffer , MessageType.audio);
-}
-}
-
-}else{
-const buffer = fs.readFileSync(filepath)
-	conn.sendMessage(id , buffer , MessageType.audio);(suara.length > 200){ // check longness of text, because otherways google translate will give me a empty file
-  msg.reply("Text kepanjangan bro!")
-}else{
-const buffer = fs.readFileSync(filepath)
-	conn.sendMessage(id , buffer , MessageType.audio);
-
 };
 }*/
 	
