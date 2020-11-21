@@ -12,7 +12,7 @@ const menu = require("./lib/menu.js");
 const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 //
-const BotName = 'Akb4r Bot™🚀'; // Nama Bot Whatsapp
+const BotName = 'Akb4r™'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/Kamaadoo_tanjiroo'; // Nama Instagramlu cok
 const whatsapplu = '0813-6896-5962'; // Nomor whatsapplu cok
 const kapanbotaktif = '08:00-09:00 Wib'; // Kapan bot lu aktif
