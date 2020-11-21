@@ -16,7 +16,7 @@ const BotName = 'Akb4r™'; // Nama Bot Whatsapp
 const instagramlu = 'https://instagram.com/kamaadoo_tanjiroo'; // Nama Instagramlu cok
 const whatsapplu = '0813-6896-5962'; // Nomor whatsapplu cok
 const kapanbotaktif = '24 Jam'; // Kapan bot lu aktif
-const grupch1 = 'https://chat.whatsapp.com/FsAlnxqz6y2BhCQi5ayCLG'; // OFFICIAL GRUP LU 1
+const grupch1 = 'https://chat.whatsapp.com/K4vJLX34mvqIDS7cd05Gfi'; // OFFICIAL GRUP LU 1
 const grupch2 = 'Belum Ada'; // OFFICIAL GRUP LU 2
 //
 const
