@@ -144,8 +144,8 @@ axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
 })
 }
 
-if (text.includes("#yt")){
-const teks = text.replace(/#yt /, "")
+if (text.includes("#ytmp4")){
+const teks = text.replace(/#ytmp4 /, "")
 axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
     let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.linkVideo}`;
     conn.sendMessage(id, hasil ,MessageType.text);
