@@ -152,13 +152,18 @@ if (text.includes("#sholat")){
 }
 
 	
-if (text.includes("#ytmp3")){
-const teks = text.replace(/#ytmp3 /, "")
-axios.get(`https://alfians-api.herokuapp.com/api/yta?url=${teks}`).then((res) => {
-	conn.sendMessage(id, '[ WAIT ] Sedang di proses⏳ silahkan tunggu sebentar', MessageType.text)
-    let hasil = `✅Lagu Berhasil Di Download, silahkan klik link dan download hasilnya\nKlik link dibawah🗡️\n\nJudul: ${res.data.title}\n\nUkuran audio: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+if (text.includes("#yt")){
+
+const teks = text.replace(/#yt /, "")
+
+axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
+
+    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.linkVideo}`;
+
     conn.sendMessage(id, hasil ,MessageType.text);
+
 })
+
 }
 	
 if (text.includes("#tiktok")) {
@@ -593,9 +598,14 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
       }
 
    }
-/*   if (text.includes("#yt"))
+/*   if (text.includes("#ytmp4"))
    {
-      const url = text.replace(/#yt/, "");
+      cons*   if (text.includes("#ytmp4"))
+   {
+      const url = text.replace(/#ytmp3/, "");
+      const exec = require('child_process').exec;
+
+      var videoidt url = text.replace(/#ytmp3/, "");
       const exec = require('child_process').exec;
 
       var videoid = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
