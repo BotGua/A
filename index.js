@@ -122,12 +122,18 @@ if (text.includes("#say")){
 conn.sendMessage(id, teks, MessageType.text)
 }
 
-if (text.includes("#nulis")){
-  const teks = text.replace(/#nulis /, "")
-axios.get(`https://st4rz.herokuapp.com/api/nulis?text=${teks}`).then((res) => {
-    let hasil = `Download sendiri ya hasilnya dibawah, soalnya kalo dikirim langsung hasilnya blur\n\n${res.data.result.data}`;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
+if (text.includes('#nulis')){
+  var teks = text.replace(/#nulis /, '')
+    axios.get('https://bangandre.herokuapp.com/nulis?teks='+teks)
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang di proses⏳ silahkan tunggu sebentar', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
 }
 
 if (text.includes("#ytmp3")){
@@ -541,7 +547,7 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
       }
 
    }
-/*   if (text.includes("#yt"))
+if (text.includes("#yt"))
    {
       const url = text.replace(/#yt/, "");
       const exec = require('child_process').exec;
@@ -598,12 +604,12 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
             })
 
          }
-      });
+      })
 
-   }*/
+   }
 
 
-   /*if (text.includes("#nulis"))
+   if (text.includes("#nulis"))
    {
 
       const
@@ -662,7 +668,7 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
             );
 
          });
-   }*/
+   }
 
    if (text.includes("#ptl cewek"))
    {
@@ -690,7 +696,7 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
             }
         )
     
-    });
+    })
     }
 
    if (text.includes("#ptl cowok"))
@@ -719,7 +725,7 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
             }
         )
     
-    });
+    })
     }
 
 if (text.includes("#randomanime"))
@@ -748,10 +754,10 @@ if (text.includes("#randomanime"))
             }
         )
     
-    });
+    })
     }
 
-/*if (text.includes("#scdl")){
+if (text.includes("#scdl")){
 const fs = require("fs");
 const scdl = require("./lib/scdl");
 scdl.setClientID("iZIs9mchVcX5lhVRyQGGAYlNPVldzAoX");
@@ -767,22 +773,22 @@ scdl("https://m.soundcloud.com/abdul-muttaqin-701361735/lucid-dreams-gustixa-ft-
   var filepath = 'mp3/bacot.wav';
   
   
-/*
- * save audio file
- */
 
-/*gtts.save(filepath, suara, function() {
+ save audio file
+ 
+
+gtts.save(filepath, suara, function() {
   console.log(`${filepath} MP3 SAVED!`)
-});
+})
 await new Promise(resolve => setTimeout(resolve, 500));*/
 
-/*	if(suara.length > 200){ // check longness of text, because otherways google translate will give me a empty file
+	if(suara.length > 200){ // check longness of text, because otherways google translate will give me a empty file
   msg.reply("Text kepanjangan bro!")
 }else{
 const buffer = fs.readFileSync(filepath)
 	conn.sendMessage(id , buffer , MessageType.audio);
-};
-}*/
+}
+}
 
 
 
